@@ -1,0 +1,33 @@
+#1
+Text:
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+---End Text
+Options:
+go east;2,get shovel;1000
+---End 1
+-----
+#2
+Text:
+E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+---End Text
+Options:
+go west;1,go east;3
+---End 2
+-----
+#3
+Text:
+Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+---End Text
+Options:
+go west;2,go ne;4,go se;5,dig;1001
+---End 3
