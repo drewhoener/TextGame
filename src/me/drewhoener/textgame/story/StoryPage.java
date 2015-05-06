@@ -8,6 +8,8 @@ public class StoryPage {
 	private List<String> storyText = new ArrayList<>();
 	private OptionList options;
 	private int pageNum;
+	private int meta;
+	public int curLine = -1;
 
 	public StoryPage(int pageNum, List<String> storyText, OptionList options) {
 		this.pageNum = pageNum;
@@ -32,8 +34,30 @@ public class StoryPage {
 
 	}
 
+	public String getNextLine() {
+
+		this.curLine++;
+		int cur = curLine;
+
+		if (this.curLine < this.storyText.size()) {
+
+			this.curLine = -1;
+			return this.storyText.get(cur);
+		}
+
+		return null;
+	}
+
+	public int getMeta() {
+		return this.meta;
+	}
+
 	public void setOptions(OptionList options) {
 		this.options = options;
+	}
+
+	public void setMeta(int meta) {
+		this.meta = meta;
 	}
 
 	public void setStoryText(List<String> storyText) {

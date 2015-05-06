@@ -13,6 +13,7 @@ public class DataHolder {
 	public final List<String> inventoryItems = new ArrayList<>();
 	public StoryPage currentPage;
 	public StoryPage lastPage = null;
+	public boolean shouldAdvance = false;
 
 	public DataHolder(GameManager manager) {
 		this.manager = manager;

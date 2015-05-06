@@ -1,5 +1,7 @@
 package me.drewhoener.util;
 
+import java.util.List;
+
 public class Util {
 
 	protected Util() {
@@ -33,6 +35,28 @@ public class Util {
 			}
 		}
 		return true;
+	}
+
+	public static String joinArray(String[] str, String join) {
+
+		String joined = str[0];
+
+		for (int i = 1; i < str.length; i++) {
+			joined += join + str[i];
+		}
+
+		return joined;
+	}
+
+	public static List<String> formatOptionList(List<String> list) {
+
+		for (int i = 0; i < list.size(); i++) {
+
+			list.set(i, "Option " + (i + 1) + ": " + list.get(i));
+
+		}
+
+		return list;
 	}
 
 }

@@ -2,7 +2,9 @@ package me.drewhoener.textgame.story;
 
 import me.drewhoener.util.Util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class OptionList {
@@ -11,7 +13,7 @@ public class OptionList {
 
 	public OptionList(String data) {
 
-		String[] options = data.split(Pattern.quote(","));
+		String[] options = data.split(Pattern.quote("_"));
 
 		this.parseData(options);
 
@@ -31,6 +33,18 @@ public class OptionList {
 
 		return this.optionMap.toString();
 
+	}
+
+	public List<String> getOptions() {
+
+		List<String> list = new ArrayList<>();
+
+		for (String s : this.optionMap.keySet()) {
+
+			list.add(s.toUpperCase());
+
+		}
+		return list;
 	}
 
 	public void parseData(String[] dataParts) {
